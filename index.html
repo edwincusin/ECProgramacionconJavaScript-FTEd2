@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de flujo</title>
+</head>
+<body>
+    <h1>Control de flujo</h1>
+    <h2>Estructuras</h2>
+    <h3>Estructura for..in</h3>
+    <p>Ejemplo: toma el numero de la cantidad elemntos del vector</p>
+    
+    <script>//Prueba estructura for..in con array
+
+        var numeros=[0,1,2,3,4,15];
+        for(i in numeros){
+            var a=numeros[i];
+            document.write(a," ");
+        }
+    </script>
+    
+    <br> <br>
+
+    <h2>Funciones</h2>
+    <h3>lenght, concat() y signo (+)</h3>
+    <p>Ejemplo: Funciones para unir cadenas de texto</p>
+
+    <script>//lenght
+        var mensaje="hola Edwin Cusin"
+        var numCaracteres=mensaje.length;
+        document.writeln("Con length : ",numCaracteres);
+    </script>
+    <br>
+    <script>// signo +
+        var mensaje1 = "Edwin "; 
+        var mensaje2 = "Cusin";
+        var unirMensajes = mensaje1 + mensaje2;
+        document.writeln("Con signo + : ",unirMensajes);
+    </script>
+    <br>
+    <script> // concat()
+        var mensaje1 = "Edwin "; 
+        var mensaje2 = "Cusin Antamba";
+        var unirMensajes = mensaje1.concat(mensaje2);
+        document.writeln("Con concat() : ",unirMensajes);
+    </script>
+    <br>
+    <script>//con variables numericas el uso del +
+        var mensaje1 = "Edwin "; 
+        var mensaje2 = 10;
+        var unirMensajes = mensaje1 + mensaje2;
+        document.writeln("Con signo + : ",unirMensajes);
+    </script>
+    
+    <h3>toUpperCase()</h3>
+    <p>Ejemplo: convertir lo caracteres a mayuscula</p>
+    <script>
+        var caracter = "Edwin Cusin";
+        var caracterConvertido=caracter.toUpperCase();
+        document.writeln(caracterConvertido);
+    </script>
+
+<h3>toLowerCase</h3>
+<p>Ejemplo: Convierte caracteres a minúscula</p>
+<script>
+    var caracter = "EDWIN Cusin";
+    var minuscula=caracter.toLowerCase();
+    document.writeln(minuscula);
+</script>
+
+<h3>charAt(posicion)</h3>
+<p>Ejemplo: Halla el caracter de la posicion</p>
+<script>
+    var dato="Edwin Cusin";
+    var posicion1=dato.charAt(4);
+    var posicion2 = dato.charAt(10);
+    document.writeln(posicion1, "  ", posicion2);
+</script>
+
+<h3>indexOf(caracter)</h3>
+<p>Ejemplo: Halla la posicion en la que se encuentre el caracter indicado.</p>
+<script>
+    var mensaje = "Geovany Antamba";
+    var pos = mensaje.indexOf("y");
+    document.writeln(pos);
+</script>
+
+<h3>lastIndex</h3>
+<p>Ejemplo: halla la ultima posiscion en la que se ecnuentre el caracter.</p>
+<script>
+    var mensaje = "Nena Amelia";
+    var ultPos = mensaje.lastIndexOf("e");
+    document.writeln(ultPos);
+</script>
+
+<h3>substring(inicio,final)</h3>
+<p>Ejemplo: Saca o elimina un trozo de una cadena de texto.</p>
+<script>
+    var mensaje = "Las ciencas de las matematicas";
+    var por = mensaje.substring(3);
+    document.writeln(por);
+    var por1 = mensaje.substring(5,3);
+    document.writeln(por1);
+</script>
+
+<h3>split(separador)</h3>
+<p>Ejemplo: divide la cadena de texto en diferentes trozos, definiendo un separador para dividir esa cadena y mete las porciones dentor de un array.</p>
+<script>
+    var mensaje = "Vive la vida";
+    var p = mensaje.split(" ");
+    document.writeln(p);
+</script>
+
+<h2>Funciones útiles para arrays</h2>
+<h3>length</h3>
+<p>Ejemplo: Halla el número de elementos dentro de un array.</p>
+<script>
+    var vocales = ["a","e","i","o","u"];
+    var elementos = vocales.length;
+    document.writeln(elementos);
+</script>
+
+<h3>concat()</h3>
+<p>Ejemplo: </p>
+<script>
+    var vecNum = [0,1,2,3,4];
+    var unir = vecNum.concat(5,6,7,8,9,10);
+    document.writeln(unir);
+</script>
+
+<h3>join(separador)</h3>
+<p>Ejemplo: une los elemntos de un array para formar una cadena de texto.</p>
+<script>
+    var vector = ["Mi", "familia", "bonita"];
+    var unir = vector.join("_");
+    document.writeln(unir);
+</script>
+
+<h3>pop()</h3>
+<p>Ejemplo: suprime el ultimo elemento del array y lo agrega en una variable.</p>
+<script>
+    var vector = [1,2,3,500];
+    var variable = vector.pop();
+    document.writeln(variable);
+</script>
+
+<h3>push()</h3>
+<p>Ejemplo: Agrega un elemento o varios a nuestro array.</p>
+<script>
+    var arr = [10,20,30,40];
+    arr.push(50, "hola");
+    document.writeln(arr);
+</script>
+
+<h3>shift()</h3>
+<p>Ejemplo: Suprime el primer elemento de nuestro array y lo mete en la variable seleccionada.</p>
+<script>
+    var vector = [1,2,3,500];
+    var variable = vector.shift();
+    document.writeln(variable, " vector = ");
+    document.writeln(vector);
+    
+    //impresion con for in
+    for(var i in vector){
+        document.writeln(vector[i]);
+    }
+</script>
+
+<h3>unshift()</h3>
+<p>Ejemplo: Agrega un elemnto o varios al principio de nuestro array.</p>
+<script>
+    var vector = [10,20,30,40]
+    vector.unshift("Numeros");
+    document.writeln(vector);
+</script>
+
+<h3>reverse()</h3>
+<p>Ejemplo: Coloca los elemntos de un array en un orden inverso.</p>
+<script>
+    var vector = [1,2,3,4,5,6,7,8,9,10]
+   var  x=vector.reverse();
+    document.writeln(x);
+</script>
+
+<h2>Funciones útiles para números</h2>
+<h3>NaN</h3>
+<p>Ejemplo: el lenguaje js, devuelve esto si la variable con la que estamos trabajando o el resultado de una operacion no es un numero. 0/0</p>
+<script>
+    var num1 = 0; num2 = 0;
+    //alert(num1/num2);
+    document.write(num1/num2);
+</script>
+
+<h3>isNaN</h3>
+<p>Ejemplo: Protege nuesto codigo de numeros no numericos.</p>
+<script>
+    var num1 = 0; num2 = 0;
+    if(isNaN(num1/num2)){
+        document.write("no numerico");
+    }else{
+        document.write("numerico");
+    }
+
+</script>
+
+<h3>Infinity</h3>
+<p>Ejemplo: Es el valor de infinito cuando las operaciones dan dicho resultado.</p>
+<script>
+    var num1 = 10; num2 = 0;
+    //alert(num1/num2);
+    document.write(num1/num2);
+</script>
+
+<h3>toFixed(digitos)</h3>
+<p>Ejemplo: Fija el numero de decimales que tiene que resolver una operacion y redondea si es necesario.</p>
+<script>
+    var numero = 10.577777;
+    y=numero.toFixed();
+    document.write(y);
+</script>
+
+<h2>El ámbito de las variables</h2>
+
+
+</body>
+</html>
