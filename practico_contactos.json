@@ -1,0 +1,34 @@
+
+{
+    "nombre": "Edwin",
+    "apellido": "Rios",
+    "lenguajes": ["java","c++","php8"],
+    "edad":25,
+    "experiencia":[
+        {
+            "empresa": "Esfoguar",
+            "antiguedad":3
+        },
+        {
+            "empresa": "Electronic",
+            "antiguedad":1
+        }
+    ],
+
+    "direccion":{
+        "calle": "San Vicente",
+        "numero": 32,
+        "ciudad": "Quito",
+        "pago_agua": [
+            {
+                "id":0,
+                "mes":"abril"
+            },
+            {
+                "id":1,
+                "mes":"mayo"
+            }
+        ]
+    }
+
+}   
