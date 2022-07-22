@@ -1,0 +1,23 @@
+{
+    "phonebook": {
+        "objectid": "string",
+        "owner": {
+            "contact": 
+               {
+                "objectid" : "string",
+                "phone" : "string",
+                "name" : "string",
+                "title" : "string",
+                "age" : "int",
+                "address" : 
+                    {
+                        "objectid" : "string",
+                        "street" : "string",
+                        "city" : "string",
+                        "state" : "string"
+                    } 
+               }            
+        },
+        "contacts": [1,2,3]
+    }
+}
