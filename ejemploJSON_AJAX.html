@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json a AJAX</title>
+</head>
+<body>
+
+    <button onclick="ajax_get_json"> Mostrar Datos</button>
+    <br><br>
+    <div id="info"></div>
+
+    <script type="text/javascript">
+
+        var resultado = document.getElementById("info");
+
+        function ajax_get_json(){
+            var xmlhttp;
+            if(window.XMLHttpRequest){
+               xmlhttp = new XMLHttpRequest();
+            } else{
+                xmlhttp = new ActiveXObject(Microsoft.XMLHTTP);
+            }
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState === 4 && xmlhttp.status ===200){
+                   var datos = JSON.parse(xmlhttp.responseText);
+                   for(var i in datos){
+                    resultado.innerHTML +=i + " : " + datos[i] ;
+                   }
+                }
+            }
+            xmlhttp.open("GET" , "ejemploJSON.json", true);
+            xmlhttp.send();
+
+        }
+
+    </script>
+    
+</body>
+</html>
