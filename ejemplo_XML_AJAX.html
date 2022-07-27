@@ -15,6 +15,11 @@
             }
             return obj; //devolvemos objeto
         }
+
+
+
+
+        
         docTxt = creaObjetoAjax(); //llamar a funcion crear objeto.
         docTxt.open("GET", "ejemploXML.xml", true); //preparar petición del objeto
         docTxt.onreadystatechange = leerArchivo; //indicar dónde recoger la respuesta
