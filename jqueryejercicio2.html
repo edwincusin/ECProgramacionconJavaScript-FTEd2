@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Jquery ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        $(document).ready(function () {
+            x=$('p');
+            x.each(function(e){
+            if (x[e].textContent.length>200)
+                    $(x[e]).attr('style','background-color:yellow');
+            });
+        });
+    </script>
+
+    <h1>Resaltar textos con JQuery</h1>
+    <h2>Caso práctico</h2>
+    <h4>Construir un HTML con varios p y un js que lea estas etiquetas. El js resaltará de amarillo aquellos párrafos
+        cuyo contenido sea mayor de 100 caracteres.</h4>
+    <br><br>
+    <h3>Funciones principales</h3>
+    <p>
+        • fadeIn() y fadeOut()
+            Estos dos métodos son muy parecidos a los dos anteriores. El
+            primero muestra nuestra selección paulatinamente, el segundo la
+            oculta. Producen un efecto mucho más bonito y suelen vincularse
+            antes o después de un show o hide. Ambas admiten medidas de
+            tiempo para que se realicen estas funciones (medidas de tiempo
+            en milisegundos o mediante palabras reservadas como “slow”
+            o “fast”). También existe el faceto que admite como parámetro
+            un número de 0 a 1 con decimales siendo 1 nuestra selección
+            completamente visible y 0 completamente invisible. Por lo
+            que los números decimales comprendidos entre 0 y 1 darían a
+            nuestra selección una apariencia transparente o fantasmal.
+    </p>
+    <p>
+        • html() y html(valor)
+            El primero obtiene el html contenido dentro de nuestra selección.
+            El segundo modifica el html contenido
+    </p>
+    <p>
+        • toggle
+            Este método, cada vez que se ejecuta, cambia nuestra selección
+            alternativamente de visible a invisible, y de invisible a visible.
+
+    </p>
+</body>
+
+</html>

@@ -21,7 +21,5 @@ $(document).ready(function () {
         $("#txt2").attr('style','color:black');
     }); 
 
-
-
-
 });
+
